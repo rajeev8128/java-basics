@@ -1,0 +1,341 @@
+Index: src/Weekdays.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Weekdays.java b/src/Weekdays.java
+new file mode 100644
+--- /dev/null	(date 1725775511450)
++++ b/src/Weekdays.java	(date 1725775511450)
+@@ -0,0 +1,2 @@
++public class Weekdays {
++}
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1720872475437)
++++ b/.idea/misc.xml	(date 1720872475437)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="corretto-11" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1720872475472)
++++ b/.idea/vcs.xml	(date 1720872475472)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+--- /dev/null	(date 1720872451562)
++++ b/.gitignore	(date 1720872451562)
+@@ -0,0 +1,29 @@
++### IntelliJ IDEA ###
++out/
++!**/src/main/**/out/
++!**/src/test/**/out/
++
++### Eclipse ###
++.apt_generated
++.classpath
++.factorypath
++.project
++.settings
++.springBeans
++.sts4-cache
++bin/
++!**/src/main/**/bin/
++!**/src/test/**/bin/
++
++### NetBeans ###
++/nbproject/private/
++/nbbuild/
++/dist/
++/nbdist/
++/.nb-gradle/
++
++### VS Code ###
++.vscode/
++
++### Mac OS ###
++.DS_Store
+\ No newline at end of file
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+new file mode 100644
+--- /dev/null	(date 1720872706673)
++++ b/src/Main.java	(date 1720872706673)
+@@ -0,0 +1,16 @@
++//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
++// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
++public class Main {
++    public static void main(String[] args) {
++        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
++        // to see how IntelliJ IDEA suggests fixing it.
++        System.out.printf("Hello and welcome!");
++
++        for (int i = 1; i <= 5; i++) {
++            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
++            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
++
++            System.out.println("i = " + i);
++        }
++    }
++}
+\ No newline at end of file
+Index: src/First_class.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/First_class.java b/src/First_class.java
+new file mode 100644
+--- /dev/null	(date 1723350737604)
++++ b/src/First_class.java	(date 1723350737604)
+@@ -0,0 +1,7 @@
++public class First_class {
++
++    public static void main(String args[])
++    {
++        System.out.println("This is test that website is working fine");
++    }
++}
+Index: src/Phone_bill_calculator.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Phone_bill_calculator.java b/src/Phone_bill_calculator.java
+new file mode 100644
+--- /dev/null	(date 1723353818597)
++++ b/src/Phone_bill_calculator.java	(date 1723353818597)
+@@ -0,0 +1,31 @@
++import java.util.Scanner;
++
++public class Phone_bill_calculator {
++
++    public double bill_calculator(float planfee,float overage_min) {
++
++        double final_amt = planfee + (overage_min * 0.25) + (((planfee + (overage_min * 0.25)) * 15) / 100);
++
++        return final_amt;
++    }
++
++public static void main(String args[]){
++
++        Phone_bill_calculator  test = new Phone_bill_calculator();
++        float base_plan,over_mins;
++
++    Scanner in = new Scanner(System.in);
++    System.out.println("Enter base cost of the plan :");
++    base_plan = in.nextFloat();
++    System.out.println("Enter overage minutes : ");
++    over_mins = in.nextFloat();
++        double result = test.bill_calculator(base_plan,over_mins);
++        System.out.println("------------------------------------------------------");
++        System.out.println("Base plan : "+base_plan);
++        System.out.println("Overpay mins : "+over_mins);
++        System.out.println("Total tax Applied : "+((base_plan+over_mins)*15)/100);
++        System.out.println("Total Amount:"+result);
++
++    }
++
++}
+Index: Java_Programming.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Java_Programming.iml b/Java_Programming.iml
+new file mode 100644
+--- /dev/null	(date 1720872475348)
++++ b/Java_Programming.iml	(date 1720872475348)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	(date 1725776701550)
++++ b/.idea/workspace.xml	(date 1725776701550)
+@@ -0,0 +1,118 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="2a182264-8858-4ad1-ab64-94665ae5ccd6" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/Java_Programming.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/First_class.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Phone_bill_calculator.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/Weekdays.java" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="UPDATE_TYPE" value="REBASE" />
++  </component>
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "https://github.com/rajeev8128/java-basics.git",
++    "accountId": "2b9d7baa-2c1b-4b30-a54a-c9943ee71d61"
++  }
++}]]></component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 7
++}</component>
++  <component name="ProjectId" id="2jBtlqYk6HMj4qnMbn7hKHKr3Ub" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
++    &quot;Application.First_class.executor&quot;: &quot;Debug&quot;,
++    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
++    &quot;Application.Phone_bill_calculator.executor&quot;: &quot;Run&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
++    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
++    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/HP/IdeaProjects/Java_Programming/src/Main.java&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
++  }
++}</component>
++  <component name="RunManager" selected="Application.Phone_bill_calculator">
++    <configuration name="First_class" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="First_class" />
++      <module name="Java_Programming" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Main" />
++      <module name="Java_Programming" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="Phone_bill_calculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="Phone_bill_calculator" />
++      <module name="Java_Programming" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.Phone_bill_calculator" />
++        <item itemvalue="Application.First_class" />
++        <item itemvalue="Application.Main" />
++      </list>
++    </recent_temporary>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="2a182264-8858-4ad1-ab64-94665ae5ccd6" name="Changes" comment="" />
++      <created>1720872452049</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1720872452049</updated>
++    </task>
++    <servers />
++  </component>
++  <component name="XDebuggerManager">
++    <breakpoint-manager>
++      <breakpoints>
++        <line-breakpoint enabled="true" type="java-line">
++          <url>file://$PROJECT_DIR$/src/Main.java</url>
++          <line>12</line>
++          <option name="timeStamp" value="1" />
++        </line-breakpoint>
++      </breakpoints>
++    </breakpoint-manager>
++  </component>
++  <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/Java_Programming$First_class.ic" NAME="First_class Coverage Results" MODIFIED="1723350797916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1720872475369)
++++ b/.idea/modules.xml	(date 1720872475369)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/Java_Programming.iml" filepath="$PROJECT_DIR$/Java_Programming.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
